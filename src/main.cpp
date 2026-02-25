@@ -2,43 +2,27 @@
 /**
  * @file main.ino
  * @brief Embedded Force Measurement System using FSR
- * @author YOUR_NAME
- * @date YYYY-MM-DD
+ * @author subhasini123
+ * @date 2026-02-23
  *
  * @details
  * Reads analog force data from FSR sensor and
  * displays structured output via Serial Monitor.
  */
 
- // TODO 1:
- // Define FSR analog pin (Use A0)
 
- // TODO 2:
- // Create variable to store sensor reading
 
+#include <Arduino.h>
+int value=0;
 void setup() {
-
-    // TODO 3:
-    // Initialize Serial communication (9600 baud rate)
-
-    // TODO 4:
-    // Print system initialization message
+    // write your initialization code here
+    Serial.begin(9600);
+    pinMode(A0, INPUT);
 }
 
 void loop() {
-
-    // TODO 5:
-    // Read analog value from FSR
-
-    // TODO 6:
-    // Print raw ADC value
-
-    // TODO 7:
-    // Apply simple threshold logic (e.g., detect pressure)
-
-    // TODO 8:
-    // Print pressure detection message
-
-    // TODO 9:
-    // Add delay (500ms or 1 second)
+    // write your code here
+    value=analogRead(A0);
+    Serial.println(value);
+    delay(500);
 }
